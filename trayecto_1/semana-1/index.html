@@ -28,7 +28,7 @@
 
     <main class="container py-4">
       <section class="mb-5" aria-labelledby="titulo-resumen">
-        <h2 id="titulo-resumen" class="titulo-seccion">Resumen: qué aprendimos</h2>
+        <h2 id="titulo-resumen" class="titulo-seccion">Resumen: ¿qué aprendimos?</h2>
         <p>
           Aprendimos que un algoritmo es una secuencia finita, ordenada y precisa de pasos para resolver un problema.
           Antes de programar, identificamos los datos que ingresan, el proceso que se realiza y el resultado que se obtiene.
@@ -36,7 +36,7 @@
         <ul>
           <li>Un algoritmo debe ser preciso, ordenado, finito, determinista y efectivo.</li>
           <li>El pensamiento computacional ayuda a dividir un problema en partes y reconocer patrones.</li>
-          <li>Podemos representar una solucion con instrucciones, pseudocodigo o un diagrama de flujo.</li>
+          <li>Podemos representar una solución con instrucciones, pseudocódigo o un diagrama de flujo.</li>
           <li>En PSeInt usamos <code>Leer</code> para recibir datos, <code>Escribir</code> para mostrar mensajes y <code>&lt;-</code> para asignar valores.</li>
           <li>Las variables tienen un tipo de dato, como cadena, entero o real.</li>
         </ul>
@@ -44,12 +44,44 @@
 
       <section class="mb-5" aria-labelledby="titulo-ejercicios">
         <h2 id="titulo-ejercicios" class="titulo-seccion mb-4">Ejercicios realizados</h2>
+        <div class="row g-4 mb-4">
+          <div class="col-12 col-md-6">
+            <article class="card tarjeta-ejercicio h-100">
+              <div class="card-body">
+                <h3 class="card-title h5">Ejercicio 1. Cruzar la quebrada</h3>
+                <p>El campesino debe pasar el perro, la gallina y el maíz. La canoa solo lleva al campesino y uno de los tres. No puede dejar solos al perro con la gallina ni a la gallina con el maíz.</p>
+                <ol>
+                  <li>Llevar la gallina a la otra orilla.</li>
+                  <li>Regresar solo.</li>
+                  <li>Llevar el perro a la otra orilla.</li>
+                  <li>Regresar con la gallina.</li>
+                  <li>Llevar el maíz a la otra orilla.</li>
+                  <li>Regresar solo.</li>
+                  <li>Llevar la gallina a la otra orilla.</li>
+                </ol>
+                <p class="mb-0">La gallina regresa en el paso cuatro para no quedar sola con el perro ni con el maíz.</p>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-12 col-md-6">
+            <article class="card tarjeta-ejercicio h-100">
+              <div class="card-body d-flex flex-column">
+                <h3 class="card-title h5">Ejercicio 2. Preparar un tinto</h3>
+                <p>Organiza instrucciones precisas para preparar una taza usando cantidades definidas y una condición para apagar el fuego cuando el agua empiece a hervir.</p>
+                <p class="mb-4">El procedimiento completo está en <code>tinto.md</code>.</p>
+                <a class="btn btn-outline-primary mt-auto align-self-start" href="tinto.md">Leer instrucciones</a>
+              </div>
+            </article>
+          </div>
+        </div>
+
         <div class="row g-4">
           <div class="col-12 col-md-6">
             <article class="card tarjeta-ejercicio h-100">
               <img src="img/Saludo.png" class="imagen-diagrama" alt="Diagrama de flujo del ejercicio Saludo" loading="lazy">
               <div class="card-body d-flex flex-column">
-                <h3 class="card-title h5">Ejercicio 1. Saludo</h3>
+                <h3 class="card-title h5">Ejercicio 3. Saludo</h3>
                 <p class="card-text">Lee un nombre y muestra un saludo usando el dato ingresado.</p>
                 <p class="prueba-ejercicio"><strong>Pruebas de referencia:</strong> Ana → Hola, Ana; Luis → Hola, Luis.</p>
                 <div class="botones-ejercicio mt-auto">
@@ -62,9 +94,9 @@
 
           <div class="col-12 col-md-6">
             <article class="card tarjeta-ejercicio h-100">
-              <img src="img/EdadEnDias.png" class="imagen-diagrama" alt="Diagrama de flujo del ejercicio Edad en dias" loading="lazy">
+              <img src="img/EdadEnDias.png" class="imagen-diagrama" alt="Diagrama de flujo del ejercicio Edad en días" loading="lazy">
               <div class="card-body d-flex flex-column">
-                <h3 class="card-title h5">Ejercicio 2. Edad en días</h3>
+                <h3 class="card-title h5">Ejercicio 4. Edad en días</h3>
                 <p class="card-text">Multiplica la edad en años por 365 para calcular una cantidad aproximada de días vividos.</p>
                 <p class="prueba-ejercicio"><strong>Pruebas de referencia:</strong> 20 años → 7.300 días; 18 años → 6.570 días.</p>
                 <div class="botones-ejercicio mt-auto">
@@ -79,7 +111,7 @@
             <article class="card tarjeta-ejercicio h-100">
               <img src="img/Propinas.png" class="imagen-diagrama" alt="Diagrama de flujo del ejercicio Calculadora de propinas" loading="lazy">
               <div class="card-body d-flex flex-column">
-                <h3 class="card-title h5">Ejercicio 3. Calculadora de propinas</h3>
+                <h3 class="card-title h5">Ejercicio 5. Calculadora de propinas</h3>
                 <p class="card-text">Calcula el valor de la propina, lo suma a la cuenta y reparte el total entre las personas.</p>
                 <p class="prueba-ejercicio"><strong>Pruebas de referencia:</strong> $120.000, 10 %, 4 personas → $33.000 por persona; $84.000, 15 %, 4 personas → $24.150 por persona.</p>
                 <div class="botones-ejercicio mt-auto">
@@ -94,7 +126,7 @@
             <article class="card tarjeta-ejercicio h-100">
               <img src="img/PromedioNotas.png" class="imagen-diagrama" alt="Diagrama de flujo del ejercicio Promedio de tres notas" loading="lazy">
               <div class="card-body d-flex flex-column">
-                <h3 class="card-title h5">Ejercicio 4. Promedio de tres notas</h3>
+                <h3 class="card-title h5">Ejercicio 6. Promedio de tres notas</h3>
                 <p class="card-text">Lee tres notas, las suma y divide el resultado entre tres.</p>
                 <p class="prueba-ejercicio"><strong>Pruebas de referencia:</strong> 4, 3,5 y 4,5 → 4; 3, 3 y 4 → 3,33 aproximadamente.</p>
                 <div class="botones-ejercicio mt-auto">
@@ -113,6 +145,7 @@
           <li>Cuatro algoritmos secuenciales escritos en PSeInt.</li>
           <li>Un diagrama de flujo PNG para cada programa.</li>
           <li>Pruebas de referencia con diferentes entradas para cada ejercicio.</li>
+          <li>La solución explicada del cruce de la quebrada y las instrucciones del tinto.</li>
         </ul>
       </section>
     </main>
