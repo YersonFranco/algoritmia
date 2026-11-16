@@ -1,0 +1,7 @@
+Algoritmo Saludo
+	Definir nombre Como Cadena
+
+	Escribir "Como te llamas?"
+	Leer nombre
+	Escribir "Hola, ", nombre
+FinAlgoritmo
