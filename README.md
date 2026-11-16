@@ -1,18 +1,22 @@
 # Algoritmia — Trayecto 1
 
-Repositorio académico para organizar las actividades de Algoritmia del Trayecto 1. La página principal está hecha con HTML, CSS y Bootstrap 5.3.
+Repositorio académico para organizar los ejercicios y aprendizajes de Algoritmia del Trayecto 1. El contenido está distribuido en tres semanas, con una página para consultar los temas y ejercicios de cada una.
 
 ## Cómo abrir el proyecto
 
-Abre `index.html` en un navegador y selecciona una semana. La página de la semana 1 muestra los ejercicios, sus pruebas de referencia y los enlaces para descargar los archivos PSeInt y los diagramas PNG.
+Abre [index.html](index.html) en un navegador y selecciona una semana. Desde cada página puedes volver al inicio y consultar los archivos de sus ejercicios.
+
+| Semana | Tema | Página |
+|---|---|---|
+| 1 | Introducción a los algoritmos y pensamiento computacional | [Abrir semana 1](trayecto_1/semana-1/index.html) |
+| 2 | Lógica proposicional y estructuras de decisión | [Abrir semana 2](trayecto_1/semana-2/index.html) |
+| 3 | Patrones de repetición y descomposición de problemas | [Abrir semana 3](trayecto_1/semana-3/index.html) |
 
 ## Semana 1 — Introducción a los algoritmos
 
-Se practican algoritmos secuenciales, entradas, procesos y salidas, variables, pseudocódigo y diagramas de flujo.
+Se practican algoritmos secuenciales, entradas, procesos y salidas, variables y pseudocódigo. La página de la [semana 1](trayecto_1/semana-1/index.html) presenta nueve ejercicios y sus pruebas de referencia. El [README de la semana](trayecto_1/semana-1/README.md) amplía las explicaciones y los casos de prueba.
 
-La explicación de los ejercicios está en [la página de la semana 1](trayecto_1/semana-1/index.html). El [README de la semana](trayecto_1/semana-1/README.md) reúne la lógica de los programas y sus pruebas de referencia.
-
-| Ejercicio | Programa o explicación | Diagrama |
+| Ejercicio | Programa o explicación | Imagen |
 |---|---|---|
 | 1. Cruzar la quebrada | Solución paso a paso en la página | — |
 | 2. Preparar un tinto | [tinto.md](trayecto_1/semana-1/tinto.md) | — |
@@ -24,37 +28,35 @@ La explicación de los ejercicios está en [la página de la semana 1](trayecto_
 | 8. Celsius a Fahrenheit | [CelsiusAFahrenheit.psc](trayecto_1/semana-1/psc/CelsiusAFahrenheit.psc) | [CelsiusAFahrenheit.png](trayecto_1/semana-1/img/CelsiusAFahrenheit.png) |
 | 9. Dividir una cuenta | [DividirCuenta.psc](trayecto_1/semana-1/psc/DividirCuenta.psc) | [DividirCuenta.png](trayecto_1/semana-1/img/DividirCuenta.png) |
 
-Las pruebas de referencia de la semana 1 incluyen diferentes entradas para cada programa. En la edad en días se usa el cálculo aproximado de 365 días por año.
-
 ## Semana 2 — Lógica proposicional y decisiones
 
-Se practican proposiciones, operadores lógicos, tablas de verdad, condiciones, decisiones y casos borde. La [página de la semana 2](trayecto_1/semana-2/index.html) reúne el resumen, las actividades y sus tablas; el [README de la semana 2](trayecto_1/semana-2/README.md) documenta las pruebas de escritorio.
+Se practican proposiciones, operadores lógicos, negación, condiciones, decisiones y casos límite. La página de la [semana 2](trayecto_1/semana-2/index.html) explica las actividades y el [README de la semana](trayecto_1/semana-2/README.md) contiene tablas de verdad o decisión y pruebas de escritorio.
 
-| Actividad PSeInt | Archivo |
+| Actividad | Archivo |
 |---|---|
 | Validar registro | [ValidarRegistro.psc](trayecto_1/semana-2/psc/ValidarRegistro.psc) |
 | Corregir la calculadora de propinas | [Propinas.psc](trayecto_1/semana-2/psc/Propinas.psc) |
-| Tarifa del parqueadero | [TarifaParqueadero.psc](trayecto_1/semana-2/psc/TarifaParqueadero.psc) |
-| Semáforo de inventario | [SemaforoInventario.psc](trayecto_1/semana-2/psc/SemaforoInventario.psc) |
-| Año bisiesto | [AnioBisiesto.psc](trayecto_1/semana-2/psc/AnioBisiesto.psc) |
+| Calcular la tarifa del parqueadero | [TarifaParqueadero.psc](trayecto_1/semana-2/psc/TarifaParqueadero.psc) |
+| Clasificar el inventario | [SemaforoInventario.psc](trayecto_1/semana-2/psc/SemaforoInventario.psc) |
+| Determinar si un año es bisiesto | [AnioBisiesto.psc](trayecto_1/semana-2/psc/AnioBisiesto.psc) |
 
-Además de los programas PSeInt, hay cinco ejercicios complementarios de JavaScript en [ejerciciosPropuestos.js](trayecto_1/semana-2/js/ejerciciosPropuestos.js), con ejemplos de proposiciones y decisiones.
+La práctica complementaria de JavaScript está en [ejerciciosPropuestos.js](trayecto_1/semana-2/js/ejerciciosPropuestos.js) e incluye ejercicios de proposiciones y decisiones.
 
 ## Semana 3 — Repetición y descomposición
 
-Se practican ciclos, contador, acumulador, centinela, bandera, límite de intentos, ciclos anidados y subprocesos. La [página de la semana 3](trayecto_1/semana-3/index.html) presenta los ejercicios y sus trazas; el [README de la semana 3](trayecto_1/semana-3/README.md) contiene las tablas, las firmas y el árbol de componentes.
+Se practican ciclos, contadores, acumuladores, centinelas, banderas, límites de intentos, ciclos anidados y subprocesos. La página de la [semana 3](trayecto_1/semana-3/index.html) presenta las actividades; el [README de la semana](trayecto_1/semana-3/README.md) reúne las trazas, las firmas de los subprocesos y el árbol de componentes.
 
-| Ejercicio PSeInt | Archivo |
+| Actividad | Archivo |
 |---|---|
 | Cajero con retiros y centinela | [Cajero.psc](trayecto_1/semana-3/psc/Cajero.psc) |
-| Calificaciones en un recorrido | [Calificaciones.psc](trayecto_1/semana-3/psc/Calificaciones.psc) |
+| Calificaciones: promedio, nota mayor, nota menor y reprobados | [Calificaciones.psc](trayecto_1/semana-3/psc/Calificaciones.psc) |
 | Validación de usuario con tres intentos | [ValidarUsuario.psc](trayecto_1/semana-3/psc/ValidarUsuario.psc) |
 | Pirámide con ciclos anidados | [Piramide.psc](trayecto_1/semana-3/psc/Piramide.psc) |
 | Factura de restaurante con subprocesos | [FacturaRestaurante.psc](trayecto_1/semana-3/psc/FacturaRestaurante.psc) |
 
 La práctica complementaria para calcular una compra está en [totalCompra.js](trayecto_1/semana-3/js/totalCompra.js).
 
-## Organización del repositorio
+## Organización del proyecto
 
 ```text
 algoritmia/
@@ -63,32 +65,33 @@ algoritmia/
 ├── css/
 │   └── style.css
 ├── img/
-│   └── icon.png
+│   └── icon.png                  # Ícono de las tarjetas del inicio
 └── trayecto_1/
     ├── semana-1/
     │   ├── index.html
     │   ├── README.md
     │   ├── tinto.md
-    │   ├── img/       # Diagramas PNG de la semana
+    │   ├── img/                  # Imágenes de los ejercicios de semana 1
     │   ├── js/
-    │   └── psc/       # Programas PSeInt
+    │   └── psc/                  # Programas PSeInt
     ├── semana-2/
-    │   ├── img/
-    │   ├── js/
-    │   ├── psc/
     │   ├── index.html
-    │   └── README.md
+    │   ├── README.md
+    │   ├── js/                   # Ejercicios complementarios
+    │   └── psc/                  # Programas PSeInt
     └── semana-3/
-        ├── img/
-        ├── js/
-        ├── psc/
         ├── index.html
-        └── README.md
+        ├── README.md
+        ├── js/                   # Ejercicio complementario
+        └── psc/                  # Programas PSeInt
 ```
+
+La carpeta `img/` de la raíz contiene el ícono de las tarjetas. Dentro de `trayecto_1/`, solo la semana 1 tiene una carpeta `img/`, con las imágenes de sus ejercicios.
 
 ## Tecnologías
 
 - **HTML** organiza el contenido de las páginas.
 - **CSS** contiene los estilos propios del proyecto.
-- **Bootstrap 5.3** ayuda con la cuadrícula y el diseño adaptable a distintos tamaños de pantalla.
+- **Bootstrap 5.3** ayuda con la cuadrícula y el diseño adaptable.
+- **JavaScript** se usa en las prácticas complementarias de las semanas 2 y 3.
 - **PSeInt** se utiliza para escribir los algoritmos de las actividades.
