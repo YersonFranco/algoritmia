@@ -48,3 +48,47 @@ main {
   background-color: #fff;
 }
 
+.navegacion-semana {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 1rem;
+}
+
+.navegacion-semana a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.navegacion-semana a:hover {
+  text-decoration: underline;
+}
+
+.tarjeta-ejercicio {
+  border: 0;
+  box-shadow: 0 2px 8px rgba(20, 35, 65, 0.12);
+}
+
+.imagen-diagrama {
+  width: 100%;
+  height: 230px;
+  padding: 0.75rem;
+  object-fit: contain;
+  background-color: #fff;
+}
+
+.botones-ejercicio {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.prueba-ejercicio {
+  font-size: 0.95rem;
+}
+
+@media (max-width: 576px) {
+  .botones-ejercicio .btn {
+    width: 100%;
+  }
+}
+
