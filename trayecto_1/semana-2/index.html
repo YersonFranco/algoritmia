@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Semana 2 | Algoritmia</title>
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-yEPZ7jP9S0QKiUQ0m3jjsO4ProIW7wvR9gXkI7JOGa2XVsw53Yke2bsdkBbjmmiX"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+  <header class="encabezado">
+    <nav class="navegacion-semanas" aria-label="Navegación por semanas">
+      <a class="navegacion-anterior" href="../semana-1/index.html">Semana anterior</a>
+      <a class="navegacion-centro" href="../../index.html">Volver a las semanas</a>
+      <a class="navegacion-siguiente" href="../semana-3/index.html">Semana siguiente</a>
+    </nav>
+    <h1>Semana 2</h1>
+    <p>Lógica proposicional y estructuras de decisión</p>
+  </header>
+
+  <main class="contenedor">
+    <section>
+      <h2>Resumen: ¿qué aprendimos?</h2>
+      <p>Aprendimos a convertir reglas escritas con palabras en condiciones que el algoritmo puede evaluar. Las condiciones permiten tomar decisiones y escoger qué instrucciones ejecutar.</p>
+      <ul>
+        <li>Una proposición es una afirmación que puede ser verdadera o falsa; una pregunta o una orden no lo es.</li>
+        <li>Los operadores de comparación son <code>&gt;</code>, <code>&lt;</code>, <code>&gt;=</code>, <code>&lt;=</code>, igual y diferente.</li>
+        <li>Con <code>Y</code> deben cumplirse ambas condiciones; con <code>O</code> basta una; <code>NO</code> invierte el resultado.</li>
+        <li>Al negar una condición compuesta, se niega cada parte y se cambia <code>Y</code> por <code>O</code> (ley de De Morgan).</li>
+        <li>En PSeInt usamos decisiones simples y dobles con <code>Si</code> y <code>SiNo</code>, decisiones anidadas y alternativas con <code>Segun</code>.</li>
+        <li>Los casos borde se prueban antes, justo en y después del límite. La prueba de escritorio permite revisar los valores paso a paso.</li>
+      </ul>
+      <p>Estas reglas lógicas también se pueden aplicar en formularios y otros programas. Los algoritmos de decisión de esta semana están escritos en PSeInt.</p>
+      <div class="tabla-contenedor">
+        <table>
+          <thead><tr><th>Concepto</th><th>En palabras sencillas</th><th>Ejemplo</th></tr></thead>
+          <tbody>
+            <tr><td>Proposición</td><td>Afirmación que puede ser verdadera o falsa.</td><td>“La edad es mayor o igual a 14”.</td></tr>
+            <tr><td>Comparación</td><td>Compara valores; los bordes importan.</td><td>Con edad 18, <code>edad &gt; 18</code> es falso y <code>edad &gt;= 18</code> es verdadero.</td></tr>
+            <tr><td>Conjunción</td><td>Con <code>Y</code>, ambas condiciones deben cumplirse.</td><td>Edad válida <code>Y</code> aceptación de términos.</td></tr>
+            <tr><td>Disyunción</td><td>Con <code>O</code>, basta una condición; ambas también pueden ser verdaderas.</td><td>Pagar en efectivo <code>O</code> con tarjeta.</td></tr>
+            <tr><td>Negación</td><td><code>NO</code> invierte verdadero y falso.</td><td>Negar que un campo está completo.</td></tr>
+            <tr><td>Tabla de verdad</td><td>Enumera las combinaciones verdaderas y falsas.</td><td>Dos condiciones producen cuatro combinaciones.</td></tr>
+            <tr><td>Tabla de decisión</td><td>Organiza reglas de negocio y sus resultados.</td><td>Tipo de vehículo, tiempo y factura del parqueadero.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p><strong>Orden lógico:</strong> primero <code>NO</code>, luego <code>Y</code> y al final <code>O</code>. Al mezclar operadores, los paréntesis hacen explícita la intención.</p>
+      <p><strong>La trampa del paraguas:</strong> si llueve, Johan lleva paraguas. Si Johan llegó con paraguas, no se puede concluir que llovió: pudo usarlo por otra razón. La regla no afirma que solo lo lleve cuando llueve.</p>
+      <p><strong>Formas de decisión:</strong> simple (<code>Si</code>), doble (<code>Si / SiNo</code>), anidada (una decisión dentro de otra) y múltiple (<code>Segun</code>).</p>
+      <p><strong>JavaScript y formularios:</strong> en JavaScript se usan comparaciones estrictas como <code>===</code> y <code>!==</code>, decisiones con <code>if/else</code> y <code>switch</code>, decisiones anidadas, retorno temprano y operador ternario. También se utilizan <code>const</code>, valores <em>truthy/falsy</em> y cortocircuito. En HTML, <code>required</code>, <code>min</code> y <code>max</code> ayudan a validar campos.</p>
+    </section>
+
+    <section>
+      <h2>Ejercicios realizados</h2>
+      <div class="ejercicios-apilados">
+        <article class="tarjeta">
+          <h3>Demostración guiada. Corregir la calculadora de propinas</h3>
+          <p>Agregamos una decisión antes de dividir. Si la cantidad de personas es cero o negativa, el programa muestra un mensaje; de lo contrario calcula la propina, el total y el pago por persona.</p>
+          <div class="tabla-contenedor">
+            <table>
+              <thead><tr><th>Cuenta</th><th>Propina</th><th>Personas</th><th>Resultado esperado</th></tr></thead>
+              <tbody>
+                <tr><td>$120.000</td><td>10 %</td><td>4</td><td>Propina $12.000; total $132.000; $33.000 por persona</td></tr>
+                <tr><td>$84.000</td><td>15 %</td><td>4</td><td>Propina $12.600; total $96.600; $24.150 por persona</td></tr>
+                <tr><td>$120.000</td><td>10 %</td><td>0</td><td>Mensaje: el número de personas debe ser mayor que cero</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <a class="enlace" href="psc/Propinas.psc" download>Descargar algoritmo PSeInt</a>
+        </article>
+
+        <article class="tarjeta">
+          <h3>Reto 1. Validar un registro</h3>
+          <p><strong>Regla:</strong> una persona puede registrarse si tiene 14 años o más <strong>y</strong> acepta los términos.</p>
+          <p>La condición es <code>(edad &gt;= 14) Y (respuesta = 'S')</code>. El programa convierte la respuesta a mayúscula para aceptar tanto <code>S</code> como <code>s</code>.</p>
+          <div class="tabla-contenedor">
+            <table>
+              <thead><tr><th>Edad >= 14</th><th>Acepta términos</th><th>Registro permitido</th></tr></thead>
+              <tbody>
+                <tr><td>Falso</td><td>Falso</td><td>No</td></tr>
+                <tr><td>Falso</td><td>Verdadero</td><td>No</td></tr>
+                <tr><td>Verdadero</td><td>Falso</td><td>No</td></tr>
+                <tr><td>Verdadero</td><td>Verdadero</td><td>Sí</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p><strong>Casos de prueba:</strong> 13 años y S → no puede registrarse; 14 años y N → no puede registrarse; 14 años y s → registro exitoso.</p>
+          <a class="enlace" href="psc/ValidarRegistro.psc" download>Descargar algoritmo PSeInt</a>
+        </article>
+
+        <article class="tarjeta">
+          <h3>Reto 2. Negar una condición sin equivocarse</h3>
+          <p>Una edad válida está entre 0 y 120, inclusive: <code>edad &gt;= 0 Y edad &lt;= 120</code>. Para encontrar cuándo es inválida, aplicamos De Morgan: <code>edad &lt; 0 O edad &gt; 120</code>.</p>
+          <div class="tabla-contenedor">
+            <table>
+              <thead><tr><th>Edad probada</th><th>Edad válida</th><th>Edad inválida</th></tr></thead>
+              <tbody>
+                <tr><td>-1</td><td>No</td><td>Sí</td></tr>
+                <tr><td>0</td><td>Sí</td><td>No</td></tr>
+                <tr><td>120</td><td>Sí</td><td>No</td></tr>
+                <tr><td>121</td><td>No</td><td>Sí</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p>La negación correcta usa <code>O</code>: una edad es inválida si es menor que 0 o mayor que 120.</p>
+        </article>
+
+        <article class="tarjeta">
+          <h3>Reto 3. Tarifa del parqueadero</h3>
+          <p>El administrador cobra $4.000 por hora o fracción para un carro y $2.000 para una moto. Los primeros 15 minutos son gratis. El tope diario de $30.000 se aplica antes de descontar la mitad por factura del centro comercial.</p>
+          <p>El tipo se selecciona con <code>Segun</code>: 1 es carro y 2 es moto. Los minutos negativos y los tipos distintos de 1 o 2 producen un error.</p>
+          <div class="tabla-contenedor">
+            <table>
+              <thead><tr><th>Tipo</th><th>Minutos</th><th>Factura</th><th>Resultado esperado</th></tr></thead>
+              <tbody>
+                <tr><td>Carro</td><td>15</td><td>No</td><td>$0 (15 minutos gratis inclusive)</td></tr>
+                <tr><td>Carro</td><td>16</td><td>No</td><td>$4.000</td></tr>
+                <tr><td>Carro</td><td>60</td><td>No</td><td>$4.000</td></tr>
+                <tr><td>Carro</td><td>61</td><td>No</td><td>$8.000 (dos horas o fracción)</td></tr>
+                <tr><td>Moto</td><td>61</td><td>Sí</td><td>$2.000</td></tr>
+                <tr><td>Carro</td><td>600</td><td>No</td><td>$30.000 (tope diario)</td></tr>
+                <tr><td>Carro</td><td>600</td><td>Sí</td><td>$15.000 (mitad del tope)</td></tr>
+                <tr><td>Tipo 3</td><td>30</td><td>No</td><td>Error: tipo no válido</td></tr>
+                <tr><td>Carro</td><td>-5</td><td>No</td><td>Error: minutos negativos</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p><strong>Prueba de escritorio:</strong> carro, 600 minutos y factura → tarifa $4.000 × 10 horas = $40.000 → se aplica el tope de $30.000 → con factura paga la mitad: $15.000.</p>
+          <a class="enlace" href="psc/TarifaParqueadero.psc" download>Descargar algoritmo PSeInt</a>
+        </article>
+
+        <article class="tarjeta">
+          <h3>Reto 4A. Semáforo de inventario</h3>
+          <div class="tabla-contenedor">
+            <table>
+              <thead><tr><th>Unidades</th><th>Resultado</th></tr></thead>
+              <tbody>
+                <tr><td>Menos de 0</td><td>Error: inventario negativo</td></tr>
+                <tr><td>0</td><td>Rojo: agotado</td></tr>
+                <tr><td>De 1 a 10</td><td>Amarillo: hay que pedir</td></tr>
+                <tr><td>Más de 10</td><td>Verde: todo bien</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p><strong>Casos borde:</strong> −1 → error; 0 → rojo; 1 y 10 → amarillo; 11 → verde.</p>
+          <a class="enlace" href="psc/SemaforoInventario.psc" download>Descargar algoritmo PSeInt</a>
+        </article>
+
+        <article class="tarjeta">
+          <h3>Reto 4B. Año bisiesto</h3>
+          <p>Un año es bisiesto cuando es divisible entre 4 y no entre 100, o cuando es divisible entre 400.</p>
+          <p><code>(anio MOD 4 = 0 Y anio MOD 100 &lt;&gt; 0) O anio MOD 400 = 0</code></p>
+          <div class="tabla-contenedor">
+            <table>
+              <thead><tr><th>Año</th><th>Resultado esperado</th><th>Razón</th></tr></thead>
+              <tbody>
+                <tr><td>2026</td><td>No bisiesto</td><td>No es divisible entre 4</td></tr>
+                <tr><td>2024</td><td>Bisiesto</td><td>Divisible entre 4, no entre 100</td></tr>
+                <tr><td>1900</td><td>No bisiesto</td><td>Divisible entre 100, no entre 400</td></tr>
+                <tr><td>2000</td><td>Bisiesto</td><td>Divisible entre 400</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <a class="enlace" href="psc/AnioBisiesto.psc" download>Descargar algoritmo PSeInt</a>
+        </article>
+      </div>
+    </section>
+
+    <section>
+      <h2>Ejercicios complementarios en JavaScript</h2>
+      <p>Aplicamos proposiciones y decisiones a situaciones de calendario, acceso a eventos, descuentos, contraseñas e inventario.</p>
+      <div class="ejercicios-apilados">
+        <article class="tarjeta">
+          <h3>Año bisiesto</h3>
+          <p>Se aplica la regla de divisibilidad entre 4, 100 y 400; se incluyen los años borde 1900, 2000, 2024 y 2026.</p>
+          <pre class="codigo-ejemplo"><code>function esAnioBisiesto(anio) {
+  return (anio % 4 === 0 &amp;&amp; anio % 100 !== 0) || anio % 400 === 0;
+}</code></pre>
+        </article>
+        <article class="tarjeta">
+          <h3>Acceso a un evento</h3>
+          <p>Un adulto puede entrar con boleta; una persona menor puede entrar acompañada por un adulto con boleta. La tabla de verdad usa tres proposiciones.</p>
+          <pre class="codigo-ejemplo"><code>function puedeEntrarAlEvento(edad, tieneBoleta, acompaniadoPorAdultoConBoleta) {
+  const esAdulto = edad &gt;= 18;
+  return (esAdulto &amp;&amp; tieneBoleta) || (!esAdulto &amp;&amp; acompaniadoPorAdultoConBoleta);
+}</code></pre>
+        </article>
+        <article class="tarjeta">
+          <h3>Tarifa de un gimnasio</h3>
+          <p>Estudiantes reciben 50 % de descuento y personas mayores de 60 años reciben 40 %. Si se cumplen ambas condiciones, se aplica el descuento mayor, no se suman.</p>
+          <pre class="codigo-ejemplo"><code>function calcularTarifaGimnasio(tarifa, esEstudiante, edad) {
+  let descuento = 0;
+
+  if (esEstudiante) {
+    descuento = 50;
+  }
+
+  if (edad &gt; 60 &amp;&amp; descuento &lt; 40) {
+    descuento = 40;
+  }
+
+  return tarifa - tarifa * descuento / 100;
+}</code></pre>
+        </article>
+        <article class="tarjeta">
+          <h3>Validador de contraseña</h3>
+          <p>La contraseña debe tener al menos 8 caracteres, incluir un número y no contener la palabra <code>password</code>.</p>
+          <pre class="codigo-ejemplo"><code>function validarContrasena(contrasena) {
+  const tieneLongitudMinima = contrasena.length &gt;= 8;
+  const tieneUnNumero = /[0-9]/.test(contrasena);
+  const contienePalabraProhibida = contrasena.toLowerCase().includes("password");
+
+  return tieneLongitudMinima &amp;&amp; tieneUnNumero &amp;&amp; !contienePalabraProhibida;
+}</code></pre>
+        </article>
+        <article class="tarjeta">
+          <h3>Semáforo de inventario</h3>
+          <p>Clasifica las cantidades negativas como error, cero como agotado, de 1 a 10 como bajo y más de 10 como disponible.</p>
+          <pre class="codigo-ejemplo"><code>function estadoInventario(stock) {
+  if (stock &lt; 0) {
+    return "Error";
+  }
+
+  if (stock === 0) {
+    return "Agotado";
+  }
+
+  if (stock &lt;= 10) {
+    return "Bajo";
+  }
+  return "Disponible";
+}</code></pre>
+        </article>
+      </div>
+      <p><a class="enlace" href="js/ejerciciosPropuestos.js" download>Descargar ejercicios complementarios en JavaScript</a></p>
+    </section>
+
+    <section>
+      <h2>Entregables de la semana</h2>
+      <ul>
+        <li>Cinco algoritmos PSeInt: registro, propinas corregidas, parqueadero, semáforo de inventario y año bisiesto.</li>
+        <li>Cinco ejercicios complementarios en JavaScript con su código y ejemplos.</li>
+        <li>El <a class="enlace" href="README.md">README de la semana</a> con las tablas de verdad o decisión y las pruebas de escritorio.</li>
+        <li>Esta página con el resumen de los conceptos y las explicaciones de los ejercicios.</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="pie">
+    <p>&copy; Yerson Franco</p>
+  </footer>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-WyOxWvTyr1QaMPfiPJSv76iReVthorl5uWlFtZPyK0IEB0hGzo9y5Bp9mYanr8Bu"
+    crossorigin="anonymous"></script>
+</body>
+</html>
+
+
+

@@ -18,6 +18,12 @@ main {
 .encabezado,
 .pie {
   background-color: #23418b;
+  color: #fff;
+}
+
+.encabezado {
+  padding: 1.25rem;
+  text-align: center;
 }
 
 .encabezado h1 {
@@ -86,7 +92,123 @@ main {
   font-size: 0.95rem;
 }
 
+.navegacion-semanas {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  gap: 0.75rem;
+  width: 100%;
+  margin: 0 auto 1rem;
+}
+
+.navegacion-semanas a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.navegacion-semanas a:hover {
+  text-decoration: underline;
+}
+
+.navegacion-anterior {
+  justify-self: start;
+}
+
+.navegacion-centro {
+  justify-self: center;
+  text-align: center;
+}
+
+.navegacion-siguiente {
+  justify-self: end;
+  text-align: right;
+}
+
+.contenedor {
+  width: 90%;
+  max-width: 900px;
+  margin: 1.5rem auto;
+}
+
+.contenedor section {
+  margin-bottom: 1.75rem;
+}
+
+.contenedor h2 {
+  margin-bottom: 0.75rem;
+  border-bottom: 2px solid #2452bb;
+  color: #2452bb;
+}
+
+.ejercicios-apilados {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+
+.tarjeta {
+  padding: 1rem;
+  border-radius: 6px;
+  background-color: #fff;
+  box-shadow: 0 2px 6px rgba(20, 35, 65, 0.12);
+}
+
+.tabla-contenedor {
+  overflow-x: auto;
+  margin: 0.75rem 0;
+}
+
+.tabla-contenedor table {
+  width: 100%;
+  min-width: 580px;
+  border-collapse: collapse;
+  background-color: #fff;
+}
+
+.tabla-contenedor th,
+.tabla-contenedor td {
+  padding: 0.55rem;
+  border: 1px solid #d6dbe3;
+  text-align: left;
+}
+
+.tabla-contenedor th {
+  background-color: #e4eaf4;
+}
+
+.codigo-ejemplo {
+  overflow-x: auto;
+  margin: 0.75rem 0 0;
+  padding: 0.85rem;
+  border-radius: 5px;
+  background-color: #eef2f8;
+  color: #202b3c;
+  font-size: 0.9rem;
+}
+
+.codigo-ejemplo code {
+  color: inherit;
+}
+
+.enlace {
+  color: #2452bb;
+}
+
+.contenedor .enlace {
+  display: inline-block;
+  margin-top: 0.5rem;
+}
+
 @media (max-width: 576px) {
+  .contenedor {
+    width: 94%;
+  }
+
+  .navegacion-semanas {
+    gap: 0.35rem;
+    font-size: 0.8rem;
+  }
+
   .botones-ejercicio .btn {
     width: 100%;
   }
