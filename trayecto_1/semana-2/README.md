@@ -215,8 +215,6 @@ semana-2/
 ├── README.md
 ├── js/
 │   └── ejerciciosPropuestos.js
-├── diagramas/
-├── img/
 └── psc/
     ├── AnioBisiesto.psc
     ├── Propinas.psc

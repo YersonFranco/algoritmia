@@ -58,7 +58,7 @@ El usuario puede ingresar un correo hasta tres veces. El algoritmo recorre el te
 | 2 | `ana@ejemplo.com` | Sí | Valida y termina |
 | 1, 2 y 3 | Entradas sin alguno de los dos caracteres | No | Agota los intentos y termina |
 
-La regla pedida es comprobar que estén esos dos caracteres; no se implementa una validación completa de todos los formatos posibles de correo.
+La validación comprueba que el texto contenga ambos caracteres: `@` y `.`.
 
 Archivo: [ValidarUsuario.psc](psc/ValidarUsuario.psc).
 
@@ -66,7 +66,7 @@ Archivo: [ValidarUsuario.psc](psc/ValidarUsuario.psc).
 
 El ciclo exterior recorre las filas. Para cada fila, el primer ciclo interior escribe los espacios y el segundo escribe `2 × fila − 1` asteriscos.
 
-**Traza requerida para `n = 3`:**
+**Traza para `n = 3`:**
 
 | Fila | Espacios (`n − fila`) | Asteriscos (`2 × fila − 1`) | Salida |
 |---:|---:|---:|---|

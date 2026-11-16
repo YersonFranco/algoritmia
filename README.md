@@ -65,14 +65,14 @@ algoritmia/
 ├── css/
 │   └── style.css
 ├── img/
-│   └── icon.png                  # Ícono de las tarjetas del inicio
+│   ├── icon.png                  # Ícono de las tarjetas del inicio
+│   └── riwi.png                  # Logo del encabezado
 └── trayecto_1/
     ├── semana-1/
     │   ├── index.html
     │   ├── README.md
     │   ├── tinto.md
     │   ├── img/                  # Imágenes de los ejercicios de semana 1
-    │   ├── js/
     │   └── psc/                  # Programas PSeInt
     ├── semana-2/
     │   ├── index.html
@@ -86,7 +86,7 @@ algoritmia/
         └── psc/                  # Programas PSeInt
 ```
 
-La carpeta `img/` de la raíz contiene el ícono de las tarjetas. Dentro de `trayecto_1/`, solo la semana 1 tiene una carpeta `img/`, con las imágenes de sus ejercicios.
+La carpeta `img/` de la raíz contiene el ícono de las tarjetas y el logo de Riwi. Dentro de `trayecto_1/`, solo la semana 1 tiene una carpeta `img/`, con las imágenes de sus ejercicios.
 
 ## Tecnologías
 

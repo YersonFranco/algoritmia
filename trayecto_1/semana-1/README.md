@@ -30,7 +30,7 @@ La página [index.html](index.html) presenta el resumen y las actividades. Los p
 
 ## Pruebas de referencia
 
-Los resultados de esta tabla son **esperados** a partir de las operaciones descritas. Se deben ingresar en PSeInt y comparar con la salida del programa antes de registrar que fueron ejecutados.
+La tabla presenta entradas de referencia y las salidas esperadas para cada programa.
 
 | Programa | Entradas | Resultado esperado |
 |---|---|---|
@@ -48,4 +48,4 @@ Los resultados de esta tabla son **esperados** a partir de las operaciones descr
 - Instrucciones precisas para preparar un tinto en `tinto.md`.
 - Cuatro programas secuenciales principales en PSeInt y sus diagramas de flujo PNG.
 - Tres prácticas complementarias en PSeInt y sus diagramas.
-- Dos pruebas de referencia por programa; sus resultados reales quedan pendientes de comparar con la ejecución en PSeInt.
+- Dos casos de prueba por programa, con sus entradas y salidas esperadas.
