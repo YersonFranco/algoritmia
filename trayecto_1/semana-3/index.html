@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Semana 3 | Algoritmia</title>
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-yEPZ7jP9S0QKiUQ0m3jjsO4ProIW7wvR9gXkI7JOGa2XVsw53Yke2bsdkBbjmmiX"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+  <header class="encabezado">
+    <nav class="navegacion-semanas" aria-label="Navegación por semanas">
+      <a class="navegacion-anterior" href="../semana-2/index.html">Semana anterior</a>
+      <a class="navegacion-centro" href="../../index.html">Volver a las semanas</a>
+      <span aria-hidden="true"></span>
+    </nav>
+    <h1>Semana 3</h1>
+    <p>Patrones de repetición y descomposición de problemas</p>
+  </header>
+
+  <main class="contenedor">
+    <section>
+      <h2>Resumen: ¿qué aprendimos?</h2>
+      <p>Aprendimos a repetir instrucciones con ciclos y a dividir un problema grande en partes pequeñas que podemos resolver y reutilizar. Para revisar que un ciclo funcione, hacemos una traza vuelta por vuelta.</p>
+      <ul>
+        <li>Todo ciclo tiene inicio, condición, cuerpo y actualización. Si el dato de la condición nunca cambia, el ciclo puede quedar infinito.</li>
+        <li>Usamos <code>Para</code> cuando sabemos cuántas veces repetir; <code>Mientras</code> cuando repetimos hasta que ocurra algo; y <code>Repetir ... Hasta Que</code> cuando el cuerpo debe ejecutarse al menos una vez.</li>
+        <li>Los patrones de esta semana son contador, acumulador, bandera, máximo, mínimo, centinela y límite de intentos.</li>
+        <li>Los ciclos anidados permiten recorrer filas y elementos dentro de cada fila.</li>
+        <li>Un subproceso tiene un nombre, recibe datos y puede entregar un resultado. Descomponer y reutilizar partes ayuda a ordenar la solución.</li>
+        <li>El error por uno ocurre cuando un ciclo repite una vez de más o de menos; las trazas ayudan a encontrarlo.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Ejercicios realizados</h2>
+      <div class="ejercicios-apilados">
+        <article class="tarjeta">
+          <h3>Ejercicio guiado: el caracol del pozo</h3>
+          <p>El caracol empieza en 0 m, sube 3 m cada día y resbala 2 m cada noche. El día en que llega a 10 m sale y ya no resbala. Por eso sale durante el día 8.</p>
+          <div class="tabla-contenedor">
+            <table>
+              <thead><tr><th>Día</th><th>Empieza</th><th>Sube hasta</th><th>¿Sale?</th><th>Después resbala a</th></tr></thead>
+              <tbody>
+                <tr><td>1</td><td>0</td><td>3</td><td>No</td><td>1</td></tr>
+                <tr><td>2</td><td>1</td><td>4</td><td>No</td><td>2</td></tr>
+                <tr><td>3</td><td>2</td><td>5</td><td>No</td><td>3</td></tr>
+                <tr><td>4</td><td>3</td><td>6</td><td>No</td><td>4</td></tr>
+                <tr><td>5</td><td>4</td><td>7</td><td>No</td><td>5</td></tr>
+                <tr><td>6</td><td>5</td><td>8</td><td>No</td><td>6</td></tr>
+                <tr><td>7</td><td>6</td><td>9</td><td>No</td><td>7</td></tr>
+                <tr><td>8</td><td>7</td><td>10</td><td>Sí</td><td>No resbala</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </article>
+
+        <article class="tarjeta">
+          <h3>Ejercicio guiado: cajero con PIN</h3>
+          <p>Con tres intentos, el ciclo debe terminar cuando se acierta <strong>o</strong> cuando se agotan los intentos. La condición correcta es <code>acceso O intentos = 3</code>. Usar <code>Y</code> puede dejar el ciclo repitiéndose cuando el PIN es incorrecto.</p>
+          <p>La validación de usuario también combina contador, bandera y límite de intentos para revisar un correo.</p>
+        </article>
+
+        <article class="tarjeta">
+          <h3>Ejercicio 1. Cajero: retiros con centinela</h3>
+          <p>Se leen montos a retirar hasta que se ingresa <code>0</code>. El acumulador suma los retiros y el contador registra cuántos montos válidos se ingresaron. Los valores negativos se rechazan y no se suman.</p>
+          <div class="tabla-contenedor">
+            <table>
+              <thead><tr><th>Monto leído</th><th>Total retirado</th><th>Cantidad de retiros</th><th>Qué pasa</th></tr></thead>
+              <tbody>
+                <tr><td>Inicio</td><td>$0</td><td>0</td><td>Se inicializan las variables</td></tr>
+                <tr><td>$4.000</td><td>$4.000</td><td>1</td><td>Se suma y se cuenta</td></tr>
+                <tr><td>$8.000</td><td>$12.000</td><td>2</td><td>Se suma y se cuenta</td></tr>
+                <tr><td>$2.000</td><td>$14.000</td><td>3</td><td>Se suma y se cuenta</td></tr>
+                <tr><td>$0</td><td>$14.000</td><td>3</td><td>El centinela termina el ciclo</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p><strong>Resultado esperado:</strong> 3 retiros y $14.000 retirados.</p>
+          <a class="enlace" href="psc/Cajero.psc" download>Descargar algoritmo PSeInt</a>
+        </article>
+
+        <article class="tarjeta">
+          <h3>Ejercicio 2. Calificaciones en un solo recorrido</h3>
+          <p>Se leen cinco notas. En el mismo ciclo se acumula la suma, se actualizan el máximo y el mínimo, y se cuenta cuántos estudiantes reprobaron. Se considera reprobada una nota menor que 3.</p>
+          <div class="tabla-contenedor">
+            <table>
+              <thead><tr><th>Nota</th><th>Suma acumulada</th><th>Mayor</th><th>Menor</th><th>Reprobados</th></tr></thead>
+              <tbody>
+                <tr><td>3,5</td><td>3,5</td><td>3,5</td><td>3,5</td><td>0</td></tr>
+                <tr><td>2,8</td><td>6,3</td><td>3,5</td><td>2,8</td><td>1</td></tr>
+                <tr><td>4,9</td><td>11,2</td><td>4,9</td><td>2,8</td><td>1</td></tr>
+                <tr><td>3,0</td><td>14,2</td><td>4,9</td><td>2,8</td><td>1</td></tr>
+                <tr><td>4,2</td><td>18,4</td><td>4,9</td><td>2,8</td><td>1</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p><strong>Resultado esperado:</strong> promedio 3,68; nota más alta 4,9; nota más baja 2,8; un estudiante reprobó.</p>
+          <a class="enlace" href="psc/Calificaciones.psc" download>Descargar algoritmo PSeInt</a>
+        </article>
+
+        <article class="tarjeta">
+          <h3>Ejercicio 3. Validación de usuario</h3>
+          <p>El usuario tiene hasta tres oportunidades para ingresar un correo que contenga <code>@</code> y <code>.</code>. La bandera indica si el correo pasó la validación; el contador limita los intentos y permite terminar antes si la entrada es válida.</p>
+          <div class="tabla-contenedor">
+            <table>
+              <thead><tr><th>Intento</th><th>Entrada de ejemplo</th><th>¿Contiene @ y .?</th><th>Resultado</th></tr></thead>
+              <tbody>
+                <tr><td>1</td><td>anaejemplo.com</td><td>No</td><td>Solicitar otro intento</td></tr>
+                <tr><td>2</td><td>ana@ejemplo.com</td><td>Sí</td><td>Usuario validado; termina</td></tr>
+                <tr><td>1, 2 y 3</td><td>Entradas sin @ o sin punto</td><td>No</td><td>Al tercer intento, se agotan las oportunidades</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <a class="enlace" href="psc/ValidarUsuario.psc" download>Descargar algoritmo PSeInt</a>
+        </article>
+
+        <article class="tarjeta">
+          <h3>Ejercicio 4. Pirámide de asteriscos</h3>
+          <p>El ciclo exterior recorre las filas. Los ciclos interiores escriben primero los espacios y luego los asteriscos. Para cada fila se imprimen <code>2 × fila − 1</code> asteriscos.</p>
+          <div class="tabla-contenedor">
+            <table>
+              <thead><tr><th>Fila</th><th>Espacios</th><th>Asteriscos</th><th>Fila dibujada</th></tr></thead>
+              <tbody>
+                <tr><td>1</td><td>2</td><td>1</td><td><code>  *</code></td></tr>
+                <tr><td>2</td><td>1</td><td>3</td><td><code> ***</code></td></tr>
+                <tr><td>3</td><td>0</td><td>5</td><td><code>*****</code></td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p><strong>Resultado con n = 3:</strong></p>
+          <pre class="ejemplo-texto">  *
+ ***
+*****</pre>
+          <a class="enlace" href="psc/Piramide.psc" download>Descargar algoritmo PSeInt</a>
+        </article>
+
+        <article class="tarjeta">
+          <h3>Ejercicio 5. Factura de restaurante</h3>
+          <p>La factura se divide en subprocesos. La propina es opcional; el total se reparte entre los comensales y el valor individual se redondea al peso más cercano. Primero se definen las entradas y salidas de cada subproceso.</p>
+          <div class="tabla-contenedor">
+            <table>
+              <thead><tr><th>Subproceso</th><th>Entradas</th><th>Salida</th></tr></thead>
+              <tbody>
+                <tr><td>CalcularSubtotal</td><td>Precio y cantidad de tres productos</td><td>Subtotal de la cuenta</td></tr>
+                <tr><td>CalcularPropina</td><td>Subtotal y porcentaje (0 si no desea propina)</td><td>Valor de la propina</td></tr>
+                <tr><td>CalcularTotal</td><td>Subtotal y propina</td><td>Total de la cuenta</td></tr>
+                <tr><td>CalcularPagoPorPersona</td><td>Total y cantidad de comensales</td><td>Pago por persona redondeado</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p><strong>Prueba:</strong> 2 platos de $25.000 y 1 plato de $12.000 dan un subtotal de $62.000. Con propina del 10 %, el total es $68.200; entre 3 comensales son $22.733,33, que se redondea a $22.733 por persona. Sin propina, $62.000 entre 3 se redondea a $20.667 por persona.</p>
+          <a class="enlace" href="psc/FacturaRestaurante.psc" download>Descargar algoritmo PSeInt</a>
+        </article>
+
+        <article class="tarjeta">
+          <h3>Página de perfil: árbol de componentes</h3>
+          <p>El árbol identifica las secciones de un perfil de red social y marca las partes que se repiten.</p>
+          <pre class="ejemplo-texto">Perfil
+├── Encabezado
+│   ├── Logo
+│   ├── Búsqueda
+│   └── Navegación (iconos repetidos)
+├── Contenido principal
+│   ├── Presentación del perfil
+│   │   ├── Foto de perfil
+│   │   ├── Nombre y biografía
+│   │   └── Botón de seguir
+│   └── Lista de publicaciones
+│       └── Tarjeta de publicación (se repite N veces)
+│           ├── Autor y fecha
+│           ├── Texto e imagen opcional
+│           └── Acciones y comentarios
+├── Lista de amistades
+│   └── Tarjeta de amistad (se repite N veces)
+└── Pie de página</pre>
+        </article>
+
+        <article class="tarjeta">
+          <h3>Práctica complementaria: total de una compra</h3>
+          <p>El programa suma los productos, aplica el cupón <code>RIWI10</code>, calcula el impuesto del 19 % y determina el costo del envío.</p>
+          <pre class="codigo-ejemplo"><code>function calcularSubtotal(items) {
+  let subtotal = 0;
+  for (const item of items) {
+    subtotal += item.precio * item.cantidad;
+  }
+  return subtotal;
+}
+
+function aplicarCupon(subtotal, codigo) {
+  if (codigo === "RIWI10") {
+    return subtotal * 0.9;
+  }
+  return subtotal;
+}
+
+function calcularImpuesto(valor) {
+  return valor * 0.19;
+}
+
+function calcularEnvio(subtotal) {
+  if (subtotal &gt; 150000) {
+    return 0;
+  }
+  return 8000;
+}
+
+function calcularTotal(items, codigoCupon) {
+  const subtotal = calcularSubtotal(items);
+  const totalConDescuento = aplicarCupon(subtotal, codigoCupon);
+  const impuesto = calcularImpuesto(totalConDescuento);
+  const envio = calcularEnvio(subtotal);
+  return totalConDescuento + impuesto + envio;
+}</code></pre>
+          <div class="tabla-contenedor">
+            <table>
+              <thead><tr><th>Escenario</th><th>Subtotal</th><th>Descuento</th><th>Impuesto</th><th>Envío</th><th>Total esperado</th></tr></thead>
+              <tbody>
+                <tr><td>Con cupón RIWI10</td><td>$130.000</td><td>$13.000</td><td>$22.230</td><td>$8.000</td><td>$147.230</td></tr>
+                <tr><td>Sin cupón, envío gratis</td><td>$160.000</td><td>$0</td><td>$30.400</td><td>$0</td><td>$190.400</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p>El envío es gratis cuando el subtotal es estrictamente mayor que $150.000. La función toma el subtotal original para decidir el envío, aunque se aplique un cupón.</p>
+          <a class="enlace" href="js/totalCompra.js" download>Descargar práctica de JavaScript</a>
+        </article>
+      </div>
+    </section>
+
+    <section>
+      <h2>Entregables de la semana</h2>
+      <ul>
+        <li>Cinco algoritmos PSeInt: cajero, calificaciones, validación de usuario, pirámide y factura de restaurante.</li>
+        <li>El <a class="enlace" href="README.md">README de la semana</a> con las trazas del cajero y la pirámide, firmas de los subprocesos de la factura y árbol de componentes del perfil.</li>
+        <li>La práctica complementaria del total de una compra con funciones JavaScript.</li>
+        <li>Esta página con el resumen y las explicaciones de los ejercicios.</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="pie">
+    <p>Algoritmia · Trayecto 1</p>
+  </footer>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-WyOxWvTyr1QaMPfiPJSv76iReVthorl5uWlFtZPyK0IEB0hGzo9y5Bp9mYanr8Bu"
+    crossorigin="anonymous"></script>
+</body>
+</html>

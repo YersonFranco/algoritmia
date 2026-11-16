@@ -24,7 +24,7 @@ La explicación de los ejercicios está en [la página de la semana 1](trayecto_
 | 8. Celsius a Fahrenheit | [CelsiusAFahrenheit.psc](trayecto_1/semana-1/psc/CelsiusAFahrenheit.psc) | [CelsiusAFahrenheit.png](trayecto_1/semana-1/img/CelsiusAFahrenheit.png) |
 | 9. Dividir una cuenta | [DividirCuenta.psc](trayecto_1/semana-1/psc/DividirCuenta.psc) | [DividirCuenta.png](trayecto_1/semana-1/img/DividirCuenta.png) |
 
-Los resultados de las pruebas son valores esperados y quedan por comparar con la ejecución de los programas en PSeInt. En la edad en días se usa el cálculo aproximado de 365 días por año.
+Las pruebas de referencia de la semana 1 incluyen diferentes entradas para cada programa. En la edad en días se usa el cálculo aproximado de 365 días por año.
 
 ## Semana 2 — Lógica proposicional y decisiones
 
@@ -39,6 +39,20 @@ Se practican proposiciones, operadores lógicos, tablas de verdad, condiciones, 
 | Año bisiesto | [AnioBisiesto.psc](trayecto_1/semana-2/psc/AnioBisiesto.psc) |
 
 Además de los programas PSeInt, hay cinco ejercicios complementarios de JavaScript en [ejerciciosPropuestos.js](trayecto_1/semana-2/js/ejerciciosPropuestos.js), con ejemplos de proposiciones y decisiones.
+
+## Semana 3 — Repetición y descomposición
+
+Se practican ciclos, contador, acumulador, centinela, bandera, límite de intentos, ciclos anidados y subprocesos. La [página de la semana 3](trayecto_1/semana-3/index.html) presenta los ejercicios y sus trazas; el [README de la semana 3](trayecto_1/semana-3/README.md) contiene las tablas, las firmas y el árbol de componentes.
+
+| Ejercicio PSeInt | Archivo |
+|---|---|
+| Cajero con retiros y centinela | [Cajero.psc](trayecto_1/semana-3/psc/Cajero.psc) |
+| Calificaciones en un recorrido | [Calificaciones.psc](trayecto_1/semana-3/psc/Calificaciones.psc) |
+| Validación de usuario con tres intentos | [ValidarUsuario.psc](trayecto_1/semana-3/psc/ValidarUsuario.psc) |
+| Pirámide con ciclos anidados | [Piramide.psc](trayecto_1/semana-3/psc/Piramide.psc) |
+| Factura de restaurante con subprocesos | [FacturaRestaurante.psc](trayecto_1/semana-3/psc/FacturaRestaurante.psc) |
+
+La práctica complementaria para calcular una compra está en [totalCompra.js](trayecto_1/semana-3/js/totalCompra.js).
 
 ## Organización del repositorio
 
@@ -64,10 +78,12 @@ algoritmia/
     │   ├── psc/
     │   ├── index.html
     │   └── README.md
-    └── semana-3/           # Contenido por agregar
+    └── semana-3/
         ├── img/
         ├── js/
-        └── psc/
+        ├── psc/
+        ├── index.html
+        └── README.md
 ```
 
 ## Tecnologías
@@ -76,7 +92,3 @@ algoritmia/
 - **CSS** contiene los estilos propios del proyecto.
 - **Bootstrap 5.3** ayuda con la cuadrícula y el diseño adaptable a distintos tamaños de pantalla.
 - **PSeInt** se utiliza para escribir los algoritmos de las actividades.
-
-## Semana siguiente
-
-- **Semana 3:** patrones de repetición y descomposición de problemas. Su contenido se añadirá a `trayecto_1/semana-3/`.
