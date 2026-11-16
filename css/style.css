@@ -33,6 +33,11 @@ main {
 .tarjeta-semana {
   border: 0;
   box-shadow: 0 2px 8px rgba(20, 35, 65, 0.12);
+  transition: transform 0.2s ease;
+}
+
+.tarjeta-semana:hover {
+  transform: translateY(-4px);
 }
 
 .imagen-tarjeta {
